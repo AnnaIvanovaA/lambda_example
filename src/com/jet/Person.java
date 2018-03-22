@@ -17,7 +17,6 @@ public class Person {
     private String phone;
     private String address;
 
-
     public static class Builder {
 
         private String givenName = "";

@@ -1,5 +1,6 @@
 package com.jet;
 
+import java.security.DomainCombiner;
 import java.util.List;
 
 public class Test01ForEach {
@@ -18,8 +19,11 @@ public class Test01ForEach {
         pl.forEach(p -> { System.out.println(p.printCustom(r -> "Name: " + r.getGivenName() + " EMail: " + r.getEmail())); });
 
 
-        System.out.println("\n=== Eastern Phone List ===");
-        pl.forEach(Person::printEasternName);
+    }
+
+
+    private Runnable shutDownHook(DomainCombiner domain){
+        return() -> Runtime.getRuntime().addShutdownHook(new Thread(() -> domain.getClass()));
     }
 
 }

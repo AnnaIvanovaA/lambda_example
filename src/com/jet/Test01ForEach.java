@@ -3,7 +3,7 @@ package com.jet;
 import java.security.DomainCombiner;
 import java.util.List;
 
-public class Test01ForEach {
+public class Test01foreach {
 
     public static void main(String[] args) {
 

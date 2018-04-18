@@ -17,13 +17,26 @@ public class Main {
         ia1[1] = 1;
         ia1[10] = 10;
         ia1[100] = 101;
+        try{
+            System.out.println("Hello");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
         System.out.println(ia1[101]);
 
+
         String str;
+        float fl = (float) 'a';
+
+
         int[] anArray = Inspections.getArray();
+
 
         List<Integer> intList = Inspections.getIntegerList();
         List<Integer> nullList = new ArrayList<>();
+
         Map<Integer, String> stringMap = Inspections.getMap();
         System.out.println();
     }

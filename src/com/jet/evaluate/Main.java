@@ -1,5 +1,6 @@
 package com.jet.evaluate;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,6 +8,8 @@ public class Main {
         evaluate.getName();
 
         int[] anArray = {1, 2, 3};
-        System.out.println(anArray[5]);
+        //System.out.println(anArray[5]);
+
+
     }
 }

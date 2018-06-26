@@ -9,16 +9,17 @@ import java.util.ArrayList;
 public class NewIconsAllTypes {
 
     //field
-    private static Integer intVar; //set BP - 2 options: field and line BPs
+    private static Integer intVar; //set BP - 2 options: field and line BPs -- from 182 click - watchpoint, alt+click - line BP
     private static String strVar; //valid field BP
     private static ArrayList<String> listStr; //disabled field BP
-    int var1; // valid + do not suspend BP
+    int var1; // valid + do not suspend BP + condition
     int var2; // disabled + do not suspend BP --yellow
 
     //line
-    private int array[]; //enabled line BP
+
+    private int array[]; //enabled line BP -- invalid during debugging session
     private int length;  //disabled line BP
-    int var3; // valid + do not suspend BP
+    int var3; // valid + do not suspend BP + + condition -- invalid during debugging session
     int var4; // disabled + do not suspend BP --yellow
 
 
@@ -33,11 +34,21 @@ public class NewIconsAllTypes {
     public static void someMethod3(){  //valid method BP
         intVar = 50; //BP here
         System.out.println("someMethod is working"); //BP here
-    } // valid + do not suspend BP
+    } // valid + do not suspend BP + condition
     public static void someMethod4(){  //valid method BP
         intVar = 50; //BP here
         System.out.println("someMethod is working"); //BP here
     } // disabled + do not suspend BP --yellow
+
+
+    //dependent watchpoint
+    int varInt;
+    //dependent line BP
+    ArrayList<String> list = new ArrayList<>();
+    //dependent method BP
+    public static void dependentMethod(){
+
+    }
 
 
 

@@ -1,5 +1,6 @@
 package com.jet.rendererTypeCheck;
 
+import java.math.BigDecimal;
 import java.util.Calendar;
 
 public class Main {
@@ -8,7 +9,6 @@ public class Main {
 
         rendererTypeChech();
         rendererLengthCheck();
-
     }
 
     public static void rendererLengthCheck() {
@@ -19,9 +19,6 @@ public class Main {
 
         System.out.println(LongString.stringLength706);
     }
-
-
-
 
 
 

@@ -23,4 +23,5 @@ public class Test02Filter {
                 .forEach(Person::printEasternName);
 
     }
+
 }

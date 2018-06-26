@@ -15,9 +15,9 @@ public class SearchCriteria {
     }
 
     private void initSearchMap() {
-        Predicate<Person> allDrivers = p -> p.getAge() >= 16;
-        Predicate<Person> allDraftees = p -> p.getAge() >= 18 && p.getAge() <= 25 && p.getGender() == Gender.MALE;
-        Predicate<Person> allPilots = p -> p.getAge() >= 23 && p.getAge() <= 65;
+        Predicate<Person> allDrivers = p -> p.g() >= 16;
+        Predicate<Person> allDraftees = p -> p.g() >= 18 && p.g() <= 25 && p.getGender() == Gender.MALE;
+        Predicate<Person> allPilots = p -> p.g() >= 23 && p.g() <= 65;
 
         searchMap.put("allDrivers", allDrivers);
         searchMap.put("allDraftees", allDraftees);

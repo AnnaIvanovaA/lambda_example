@@ -2,10 +2,6 @@ package com.jet.breakpoints;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,12 +12,18 @@ public class MyLambda {
 
     //4 BPs - Java Field Watchpoint, line, lambda, All -- fixed in 182
     private static final Predicate<Object> isNull = x -> x == null;
+    //2 BPs
+    private static final String str = isNull.getClass().getName();
+
+    String var;
+    List<String> list = new ArrayList<>();
+
 
     public static void main(String[] args) {
 
         method1();
         method2();
-        method3();
+        method3(4);
 
 
         if (isNull.test(null)) {
@@ -36,8 +38,9 @@ public class MyLambda {
         user1.setAge(6);
 
         //Exception BP - NPE
+
         User user2 = null;
-        user2.getAge(); //--NPE is thrown
+        //user2.getAge(); //--NPE is thrown
 
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7);
         String s;
@@ -85,26 +88,28 @@ public class MyLambda {
 
     public static void method1(){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //invalid BP on prev empty line
+    }
+    public static void method2() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("recompile -> reload");
 
     }
-    public static void method2(){
+    public static void method3(int s){
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-    }
-    public static void method3(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        System.out.println("recompile -> reload");
 
     }
 }

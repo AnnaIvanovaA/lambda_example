@@ -9,6 +9,7 @@ import java.util.*;
 public class WithoutDebugInfo {
     private static long longVar;
     private static int q = 50;
+    private static int qq = 24;
     public static ArrayList<String> arrayList;
 
     public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class WithoutDebugInfo {
         }
 
         //i should be mapped
-        for (int i : arr) {
+        for (int i: arr) {
             arr.size();
             System.out.println(i); //2nd BP Here
         }
@@ -47,7 +48,7 @@ public class WithoutDebugInfo {
             throw new InternalError("internal error: SHA-1 not available.", var3);
         }
 
-        byte var2 = (byte)((int)System.currentTimeMillis());
+        byte var2 = (byte) ((int) System.currentTimeMillis());
         var1.update(var2);
         AccessController.doPrivileged(new PrivilegedAction<Void>() {
             public Void run() {
@@ -60,8 +61,7 @@ public class WithoutDebugInfo {
                         var1.update(var1x.getBytes());
                         var1.update(var2.getProperty(var1x).getBytes());
                     }
-                }
-                catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 return null;
@@ -70,9 +70,8 @@ public class WithoutDebugInfo {
     }
 
 
-
-    public static void setVar(){
-        longVar = Integer.MAX_VALUE ;
+    public static void setVar() {
+        longVar = Integer.MAX_VALUE;
 
     }
 }

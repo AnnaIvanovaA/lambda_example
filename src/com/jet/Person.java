@@ -91,7 +91,7 @@ public class Person {
         return surName;
     }
 
-    public int getAge() {
+    public int g() {
         return age;
     }
 
@@ -130,7 +130,7 @@ public class Person {
     public void printWesternName() {
 
         System.out.println("\nName: " + this.getGivenName() + " " + this.getSurName() + "\n" +
-                "Age: " + this.getAge() + "  " + "Gender: " + this.getGender() + "\n" +
+                "Age: " + this.g() + "  " + "Gender: " + this.getGender() + "\n" +
                 "EMail: " + this.getEmail() + "\n" +
                 "Phone: " + this.getPhone() + "\n" +
                 "Address: " + this.getAddress());
@@ -140,7 +140,7 @@ public class Person {
     public void printEasternName() {
 
         System.out.println("\nName: " + this.getSurName() + " " + this.getGivenName() + "\n" +
-                "Age: " + this.getAge() + "  " + "Gender: " + this.getGender() + "\n" +
+                "Age: " + this.g() + "  " + "Gender: " + this.getGender() + "\n" +
                 "EMail: " + this.getEmail() + "\n" +
                 "Phone: " + this.getPhone() + "\n" +
                 "Address: " + this.getAddress());

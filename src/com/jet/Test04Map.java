@@ -16,8 +16,8 @@ public class Test04Map {
         int count = 0;
 
         for (Person p:pl){
-            if (p.getAge() >= 23 && p.getAge() <= 65 ){
-                sum = sum + p.getAge();
+            if (p.g() >= 23 && p.g() <= 65 ){
+                sum = sum + p.g();
                 count++;
             }
         }
@@ -32,14 +32,14 @@ public class Test04Map {
         long totalAge = pl
                 .stream()
                 .filter(search.getCriteria("allPilots"))
-                .mapToInt(p -> p.getAge())
+                .mapToInt(p -> p.g())
                 .sum();
 
         // Get average of ages
         OptionalDouble averageAge = pl
                 .parallelStream()
                 .filter(search.getCriteria("allPilots"))
-                .mapToDouble(p -> p.getAge())
+                .mapToDouble(p -> p.g())
                 .average();
 
         System.out.println("Total Ages: " + totalAge);

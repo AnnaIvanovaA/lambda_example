@@ -1,7 +1,7 @@
 package com.jet.breakpoints;
 
 
-    public class User {  //<BP> default constructor
+public class User {  //<BP> default constructor
 
     String name;
     int age;

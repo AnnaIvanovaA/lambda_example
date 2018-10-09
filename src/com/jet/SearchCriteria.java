@@ -36,7 +36,6 @@ public class SearchCriteria {
             System.exit(1);
 
         }
-
         return target;
 
     }

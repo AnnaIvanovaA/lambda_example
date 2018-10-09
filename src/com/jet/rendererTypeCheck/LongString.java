@@ -48,4 +48,5 @@ public class LongString {
             "Version 138.2210 was not affected, and I skipped 138.2458 so cannot say about that version.\n";
 
 
+    private String str11 = "big line This effectively makes this feature useless, since I can see short text renderings in the debugger itself, and now have no way to access the full text string of my object without resorting to System.out.println to dump it to the console, which feels so old-f";
 }

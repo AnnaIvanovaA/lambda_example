@@ -1,7 +1,7 @@
 package com.jet.breakpoints;
 
 public enum Delete {
-    FOO, /**
+    foo(), /**
      * some description
      */BAR, BAZ;
 }

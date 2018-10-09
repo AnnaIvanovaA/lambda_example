@@ -15,7 +15,7 @@ public class MyLambda {
     //2 BPs
     private static final String str = isNull.getClass().getName();
 
-    String var;
+    private static String var;
     List<String> list = new ArrayList<>();
 
 
@@ -42,13 +42,16 @@ public class MyLambda {
         User user2 = null;
         //user2.getAge(); //--NPE is thrown
 
-        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7);
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
         String s;
 
         List<Integer> numbersList = new ArrayList<>();
+        List<Integer> numbersList2 = new ArrayList<>();
 
-        for (int i = 0; i < 150; i++) {
+        for (int i = 0; i < 15; i++) {
+            var = "" + i;
             numbersList.add(i);
+            numbersList.add(i + 10);
         }
 
         for (int number : numbers) {
@@ -58,7 +61,7 @@ public class MyLambda {
         numbers.forEach(value -> System.out.println(value));
         numbers.forEach(System.out::println);
 
-        System.out.println(MyLambda.sumAll(numbers, n ->n % 2 == 0));  //condition BP - removal confirmation - in later builds (182)
+        System.out.println(MyLambda.sumAll(numbers, n -> n % 2 == 0));  //condition BP - removal confirmation - in later builds (182)
         System.out.println(MyLambda.sumAll(numbers, n -> n < 4));       //lambda BP
 
 
@@ -72,7 +75,7 @@ public class MyLambda {
     }
 
     public static int testMethod(int value) {
-        return value+3;
+        return value + 3;
     }
 
 
@@ -86,7 +89,7 @@ public class MyLambda {
         return total;
     }
 
-    public static void method1(){
+    public static void method1() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -94,6 +97,7 @@ public class MyLambda {
         }
         //invalid BP on prev empty line
     }
+
     public static void method2() {
         try {
             Thread.sleep(1000);
@@ -103,7 +107,8 @@ public class MyLambda {
         System.out.println("recompile -> reload");
 
     }
-    public static void method3(int s){
+
+    public static void method3(int s) {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

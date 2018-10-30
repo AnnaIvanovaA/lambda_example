@@ -24,13 +24,13 @@ public class NewIconsAllTypes {
 
 
     public static void someMethod() {  //valid method BP
-        intVar = 50; //BP here
+        intVar = 50; //BP here  do not suspend
         System.out.println("someMethod is working"); //BP here
     } //folded method with 2BPs inside
 
     public static void someMethod2() {  //valid method BP
         intVar = 50; //BP here
-        System.out.println("someMethod is working"); //BP here
+        System.out.println("someMethod is working"); //BP here do not suspend
     } //disabled
 
     public static void someMethod3() {  //valid method BP

@@ -105,6 +105,7 @@ public class MyLambda {
             e.printStackTrace();
         }
         System.out.println("recompile -> reload");
+        System.out.println("");
 
     }
 

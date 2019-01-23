@@ -1,6 +1,4 @@
-package com.jet.reproduce;
-
-import com.jet.breakpoints.User;
+package com.jet.debugtoolwindow.variables;
 
 import java.util.ArrayList;
 import java.util.List;

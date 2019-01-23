@@ -1,6 +1,6 @@
 package com.jet.breakpoints;
 
-import org.jetbrains.annotations.NotNull;
+//import com.sun.istack.internal.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -79,7 +79,7 @@ public class MyLambda {
     }
 
 
-    public static int sumAll(@NotNull List<Integer> numbers, Predicate<Integer> p) {  //Method BP
+    public static int sumAll(List<Integer> numbers, Predicate<Integer> p) {  //Method BP
         int total = 0;
         for (int number : numbers) {
             if (p.test(number)) {

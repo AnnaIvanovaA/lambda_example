@@ -1,4 +1,4 @@
-package com.jet;
+package com.jet.inline;
 
 import java.util.Scanner;
 

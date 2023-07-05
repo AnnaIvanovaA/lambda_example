@@ -7,6 +7,8 @@ public class Test02Filter {
 
     public static void main(String[] args) {
 
+
+
         List<Person> pl = Person.createShortList();
 
         SearchCriteria search = SearchCriteria.getInstance();
@@ -21,6 +23,7 @@ public class Test02Filter {
 
         pl.stream().filter(search.getCriteria("allDraftees"))
                 .forEach(Person::printEasternName);
+
 
     }
 

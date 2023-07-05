@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         Evaluate evaluate = new Evaluate();
+        evaluate.toString();
         evaluate.getName();
 
         int[] anArray = {1, 2, 3};

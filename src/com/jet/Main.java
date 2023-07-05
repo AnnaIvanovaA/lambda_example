@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         try {
             Test01foreach.main(args);
         } catch (ClassNotFoundException e) {
@@ -14,6 +16,6 @@ public class Main {
         Test04Map.main(args);
 
         System.arraycopy(args, System.identityHashCode(args), args, System.identityHashCode(args), System.identityHashCode(args));
-        System.out.println("qwer");
+        System.out.println("dafür");
     }
 }
